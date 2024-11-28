@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="/src/assets/css/index.css">
+
+</head>
+
+<body>
+
+    <body>
+        <div class="index">
+            <div class="">
+                <nav class="navbar">
+
+                    <img src="/src/assets/svg/a.svg" alt="Logo" class="firstLogo">
+
+
+                    <div class="logo">
+                        <img src="/src/assets/svg/a.svg" alt="Logo">
+                        <div class="logo">
+                            <a class="anchorTag" href="#investment">Offering</a>
+                            <a class="anchorTag" href="#investment">Investment</a>
+                            <a class="anchorTag" href="#voting">Voting</a>
+                            <a class="anchorTag" href="#wallet">Wallet</a>
+                        </div>
+
+                    </div>
+
+                    <div class="profileMenu">
+                        <div class="search-container">
+                            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <input type="text" id="searchBar" placeholder="Search...">
+                        </div>
+                        <button id="profileBtn"><i class="fa-regular fa-user"></i></button>
+                        <div class="dropdownContent" id="profileDropdown">
+                            <div>
+                                <a class="profileComponent" href="#profile"><i class="fa-solid fa-circle-user"></i>
+                                    Profile </a>
+                                <a class="profileComponent" href="#message"> <i class="fa-solid fa-comment"></i> Message
+                                </a>
+                                <a href="#logout">Logout <i class="fa-solid fa-right-to-bracket"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- mobile view -->
+                    <div class="mobileDashboard">
+                        <div class=" btn">
+                            <button id="toggleBtn">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                        </div>
+                        <div id="sidebar" class="sidebar">
+
+                            <div style="display: flex;justify-content: end;">
+                                <button class="closeBtn" id="closeBtn"><i class="fa-solid fa-xmark"></i></button>
+
+                            </div>
+
+                            <div class="sidebarContent">
+                                <input type="text" id="searchbar" placeholder="Search...">
+                                <a href="#">Offering <i class="fa-solid fa-handshake"></i></a>
+                                <a href="#">Investment <i class="fa-solid fa-coins"></i></a>
+                                <a href="#">Voting <i class="fa-solid fa-diamond"></i></a>
+                                <a href="#">Wallet <i class="fa-solid fa-wallet"></i></a>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </nav>
+            </div>
+            <!-- jQuery CDN -->
+            <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+                integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+            <!-- jQuery Validation -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"
+                integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <!-- JS -->
+            <script src="/src/assets/js/main.js"></script>
+            <!-- Fontawesone -->
+            <script src="https://kit.fontawesome.com/99e1031307.js" crossorigin="anonymous"></script>
+
+        </div>
+
+
+
+        <!-- Table -->
+
+        <!--box  -->
+        <div class="investementMainDiv">
+            <div class="investementMainBox">
+                <div class="investemntCard1">
+                    <div class="investmentContent">
+                        <div class="investemntAssetIcon">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                        </div>
+                        <div class="investemntCardTitle">Assets</div>
+                        <div class="investemntCardNumber">123+</div>
+                    </div>
+                </div>
+                <div class="investemntCard2">
+                    <div class="investmentContent">
+                        <div class="investemntAssetIcon">
+
+                            <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                        </div>
+                        <div class="investemntCardTitle">Net Investment</div>
+                        <div class="investemntCardNumber">0.04$</div>
+                    </div>
+                </div>
+                <div class="investemntCard3">
+                    <div class="investmentContent">
+                        <div class="investemntAssetIcon">
+                            <i class="fa-solid fa-sack-dollar"></i>
+                        </div>
+                        <div class="investemntCardTitle">Wallet Balance</div>
+                        <div class="investemntCardNumber">0.10$</div>
+                    </div>
+                </div>
+                <div class="investemntCard3">
+                    <div class="investmentContent">
+                        <div class="investemntAssetIcon">
+                            <i class="fa-solid fa-sack-dollar"></i>
+                        </div>
+                        <div class="investemntCardTitle">Wallet Balance</div>
+                        <div class="investemntCardNumber">0.10$</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="investmentSearchDownload" id="searchInput">
+                <div class="Investement">
+                    <input type="text" placeholder="Search here..." id="myInput" onkeyup="myFunction()">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+
+                <div class="investementDownload">
+                    <i class="fa-solid fa-download"></i>
+
+
+                    <div class="download-menu">
+                        <a href="#" id="print_option"><i class="fa-solid fa-print"></i> Print</a>
+                        <a href="#" id="csv-option" onclick="downloadCSV()"><i class="fa-solid fa-file-csv"></i> CSV</a>
+                        <a href="#" id="excel-option" onclick="downloadExcel()"><i class="fa-solid fa-file-excel"></i>
+                            Excel</a>
+                    </div>
+                </div>
+            </div>
+            <i class="fa-regular fa-right"></i>
+
+            <!-- Table -->
+            <div class="InvestmentTableContainer">
+                <table id="transactionTable" class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="filterIcon" data-column="0" data-order="asc">Property<i
+                                        class="fa-solid fa-arrow-up-short-wide"></i></div>
+                            </th>
+                            <th>
+                                <div class="filterIcon" data-column="1" data-order="asc">Purchase DT <i
+                                        class="fa-solid fa-arrow-up-short-wide"></i></i></div>
+                            </th>
+                            <th>
+                                <div class="filterIcon" data-column="2" data-order="asc">Token Price <i
+                                        class="fa-solid fa-arrow-up-short-wide"></i></div>
+                            </th>
+                            <th>
+                                <div class="filterIcon" data-column="3" data-order="asc">No of Token <i
+                                        class="fa-solid fa-arrow-up-short-wide"></i></div>
+                            </th>
+                            <th>
+                                <div class="filterIcon" data-column="4" data-order="asc">Total Token Value<i
+                                        class="fa-solid fa-arrow-up-short-wide"></i></div>
+                            </th>
+                            <th>
+                                <div class="filterIcon" data-column="5" data-order="asc">Transaction Status <i
+                                        class="fa-solid fa-arrow-up-short-wide"></i></div>
+                            </th>
+                            <th>
+                                <div class="filterIcon" data-column="6" data-order="asc">Payment Hash/ID <i
+                                        class="fa-solid fa-arrow-up-short-wide"></i></div>
+                            </th>
+                            <th>
+                                <div class="filterIcon" data-column="7" data-order="asc">Token Transaction Hash <i
+                                        class="fa-solid fa-arrow-up-short-wide"></i></div>
+                            </th>
+                            <th>
+                                <div class="filterIcon" data-column="8" data-order="asc">Paid <i
+                                        class="fa-solid fa-arrow-up-short-wide"></i></div>
+                            </th>
+                            <th>
+                                <div class="filterIcon" data-column="9" data-order="asc">Paid By <i
+                                        class="fa-solid fa-arrow-up-short-wide"></i></div>
+                            </th>
+                        </tr>
+
+
+                    </thead>
+                    <tbody id="property">
+                        <tr>
+                            <td>1</td>
+                            <td>2024-09-01</td>
+                            <td>$120</td>
+                            <td>10</td>
+                            <td>$1000</td>
+                            <td class="statusCompleted">Completed</td>
+                            <td class="hashId">123abc456****2312212</td>
+                            <td class="hashId">123abc456****2312212</td>
+                            <td class="paidYes">
+                                <p class="yes">Yes</p>
+                            </td>
+                            <td>John Doe</td>
+                        </tr>
+                        <tr>
+                            <td>2 </td>
+                            <td>2024-09-02</td>
+                            <td>$100</td>
+                            <td>1</td>
+                            <td>$110</td>
+                            <td class="statusCompleted">Completed</td>
+                            <td class="hashId">123abc456****2312212</td>
+                            <td class="hashId">789def012****2312212</td>
+                            <td class="paidYes">
+                                <p class="yes">Yes</p>
+                            </td>
+                            <td>John Doe</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2024-03-01</td>
+                            <td>$1200</td>
+                            <td>12</td>
+                            <td>$102</td>
+                            <td class="statusCompleted">Completed</td>
+                            <td class="hashId">123abc456****2312212</td>
+                            <td class="hashId">789def012****2312212</td>
+                            <td class="paid-no">
+                                <p class="no">No</p>
+                            </td>
+                            <td>John Doe</td>
+                        </tr>
+                        <tr>
+                            <td> 4</td>
+                            <td>2024-09-09</td>
+                            <td>$100</td>
+                            <td>10</td>
+                            <td>$1000</td>
+                            <td class="statusCompleted">Completed</td>
+                            <td class="hashId">123abc456****2312212</td>
+                            <td class="hashId">789def012****2312212</td>
+                            <td class="paidYes">
+                                <p class="yes">Yes</p>
+                            </td>
+                            <td>John Doe</td>
+                        </tr>
+                        <tr>
+                            <td> 5</td>
+                            <td>2024-09-08</td>
+                            <td>$100</td>
+                            <td>10</td>
+                            <td>$700</td>
+                            <td class="status-pending">Pending</td>
+                            <td class="hashId">123abc456****2</td>
+                            <td class="hashId">789def012****</td>
+                            <td class="paid-no">
+                                <p class="no">No</p>
+                            </td>
+                            <td>aaa</td>
+                        </tr>
+                        <tr>
+                            <td> 6</td>
+                            <td>2024-09-10</td>
+                            <td>$12</td>
+                            <td>11</td>
+                            <td>$376</td>
+                            <td class="statusCompleted">Completed</td>
+                            <td class="hashId">123abc456****</td>
+                            <td class="hashId">789def012****</td>
+                            <td class="paidYes">
+                                <p class="yes">Yes</p>
+                            </td>
+                            <td>Lorem</td>
+                        </tr>
+                        <tr>
+                            <td> 7</td>
+                            <td>2024-09-12</td>
+                            <td>$20</td>
+                            <td>7</td>
+                            <td>$110</td>
+                            <td class="status-pending">Pending</td>
+                            <td class="hashId">123abc456****</td>
+                            <td class="hashId">789def012****</td>
+                            <td class="paid-no">
+                                <p class="no">No</p>
+                            </td>
+                            <td>Doe</td>
+                        </tr>
+                        <tr>
+                            <td> 8</td>
+                            <td>2024-09-21</td>
+                            <td>$900</td>
+                            <td>20</td>
+                            <td>$190</td>
+                            <td class="status-pending">Pending</td>
+                            <td class="hashId">123abc456****2312212</td>
+                            <td class="hashId">789def012****2312212</td>
+                            <td class="paid-no">
+                                <p class="no">No</p>
+                            </td>
+                            <td>Sona</td>
+                        </tr>
+                        <tr>
+                            <td> 9</td>
+                            <td>2024-09-01</td>
+                            <td>$670</td>
+                            <td>80</td>
+                            <td>$2100</td>
+                            <td class="status-pending">Pending</td>
+                            <td class="hashId">123abc456****2312212</td>
+                            <td class="hashId">789def012****2312212</td>
+                            <td class="paidYes">
+                                <p class="yes">Yes</p>
+                            </td>
+                            <td>John Doe</td>
+                        </tr>
+                        <tr>
+                            <td> 10</td>
+                            <td>2024-09-01</td>
+                            <td>$100</td>
+                            <td>10</td>
+                            <td>$1000</td>
+                            <td class="status-pending">Pending</td>
+                            <td class="hashId">123abc456****2312212</td>
+                            <td class="hashId">789def012****2312212</td>
+                            <td class="paid-no">
+                                <p class="no">No</p>
+                            </td>
+                            <td>Mona</td>
+                        </tr>
+                        <tr>
+                            <td> 11</td>
+                            <td>2024-09-01</td>
+                            <td>$120</td>
+                            <td>3</td>
+                            <td>$2100</td>
+                            <td class="status-pending">Pending</td>
+                            <td class="hashId">123abc456****</td>
+                            <td class="hashId">789def012****</td>
+                            <td class="paid-no">
+                                <p class="no">No</p>
+                            </td>
+                            <td>ram</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>2024-09-01</td>
+                            <td>$120</td>
+                            <td>3</td>
+                            <td>$2100</td>
+                            <td class="status-pending">Pending</td>
+                            <td class="hashId">123abc456****</td>
+                            <td class="hashId">789def012****</td>
+                            <td class="paid-no">
+                                <p class="no">No</p>
+                            </td>
+                            <td>ram</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>2024-09-07</td>
+                            <td>$120</td>
+                            <td>3</td>
+                            <td>$2100</td>
+                            <td class="status-pending">Pending</td>
+                            <td class="hashId">123abc456****</td>
+                            <td class="hashId">789def012****</td>
+                            <td class="paid-no">
+                                <p class="no">No</p>
+                            </td>
+                            <td>ram</td>
+                        </tr>
+                        <tr>
+                            <td> aa</td>
+                            <td>2024-09-12</td>
+                            <td>$1</td>
+                            <td>2</td>
+                            <td>$30</td>
+                            <td class="status-pending">Pending</td>
+                            <td class="hashId">123abc456****</td>
+                            <td class="hashId">789def012****</td>
+                            <td class="paid-no">
+                                <p class="no">No</p>
+                            </td>
+                            <td>namna</td>
+                        </tr>
+                        <tr>
+                            <td> jj</td>
+                            <td>2024-09-31</td>
+                            <td>$210</td>
+                            <td>97</td>
+                            <td>$1110</td>
+                            <td class="status-pending">Pending</td>
+                            <td class="hashId">123abc456****</td>
+                            <td class="hashId">789def012****</td>
+                            <td class="paid-no">
+                                <p class="no">No</p>
+                            </td>
+                            <td>hh</td>
+                        </tr>
+                        <tr>
+                            <td> dd</td>
+                            <td>2024-03-1</td>
+                            <td>$20</td>
+                            <td>9</td>
+                            <td>$410</td>
+                            <td class="status-pending">Pending</td>
+                            <td class="hashId">123abc456****</td>
+                            <td class="hashId">789def012****</td>
+                            <td class="paid-no">
+                                <p class="no">No</p>
+                            </td>
+                            <td>karam</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- button   -->
+            <div class="nextPageButton">
+                <div class="investmentButton">
+                    <!-- Previous Button -->
+                    <div class="buttonContainer" id="prevBtn">
+                        <!-- <div class="buttonIcon1"></div> -->
+                        <div class="buttonText" id="prevBtn" disabled><i class="fa-solid fa-arrow-left"></i></div>
+
+                    </div>
+                    <!-- <span id="pageInfo"></span> -->
+
+                    <!-- Page Number -->
+                    <h5 class="pageNumber" id="pageInfo">1</h5>
+
+
+                    <!-- Next Button -->
+                    <div class="buttonContainer">
+                        <div class="buttonText" id="nextBtn"><i class="fa-solid fa-arrow-right"></i></div>
+                        <!-- <div class="buttonIcon2"><i class="fa-solid fa-arrow-right"></i></div> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- we can insert the data by this also -->
+        <!-- <script>
+            $(document).ready(function () {
+                $('#transactionTable tbody').append(`
+                    <tr style="display: none;">
+                        <td>Property 2</td>
+                        <td>2024-09-02</td>
+                        <td>$150</td>
+                        <td>5</td>
+                        <td>$750</td>
+                        <td class="status-pending">Pending</td>
+                        <td>789xyz456</td>
+                        <td>012ghi345</td>
+                        <td class="paid-no">No</td>
+                        <td>Jane Smith</td>
+                    </tr>
+                `).find('tr:last').fadeIn(1000);
+                $('#transactionTable tbody').append(`
+                    <tr style="display: none;">
+                        <td>Property 2</td>
+                        <td>2024-09-02</td>
+                        <td>$150</td>
+                        <td>5</td>
+                        <td>$750</td>
+                        <td class="status-pending">Pending</td>
+                        <td>789xyz456</td>
+                        <td>012ghi345</td>
+                        <td class="paid-no">No</td>
+                        <td>Jane Smith</td>
+                    </tr>
+                `).find('tr:last').fadeIn(1000);
+                $('#transactionTable tbody').append(`
+                    <tr style="display: none;">
+                        <td>Property 2</td>
+                        <td>2024-09-02</td>
+                        <td>$150</td>
+                        <td>5</td>
+                        <td>$750</td>
+                        <td class="status-pending">Pending</td>
+                        <td>789xyz456</td>
+                        <td>012ghi345</td>
+                        <td class="paid-no">No</td>
+                        <td>Jane Smith</td>
+                    </tr>
+                `).find('tr:last').fadeIn(1000);
+                $('#transactionTable tbody').append(`
+                    <tr style="display: none;">
+                        <td>Property 2</td>
+                        <td>2024-09-02</td>
+                        <td>$150</td>
+                        <td>5</td>
+                        <td>$750</td>
+                        <td class="status-pending">Pending</td>
+                        <td>789xyz456</td>
+                        <td>012ghi345</td>
+                        <td class="paid-no">No</td>
+                        <td>Jane Smith</td>
+                    </tr>
+                `).find('tr:last').fadeIn(1000);
+                $('#transactionTable tbody').append(`
+                    <tr style="display: none;">
+                        <td>Property 2</td>
+                        <td>2024-09-02</td>
+                        <td>$150</td>
+                        <td>5</td>
+                        <td>$750</td>
+                        <td class="status-pending">Pending</td>
+                        <td>789xyz456</td>
+                        <td>012ghi345</td>
+                        <td class="paid-no">No</td>
+                        <td>Jane Smith</td>
+                    </tr>
+                `).find('tr:last').fadeIn(1000);
+    
+                $('#transactionTable tbody').append(`
+                    <tr style="display: none;">
+                        <td>Property 2</td>
+                        <td>2024-09-02</td>
+                        <td>$150</td>
+                        <td>5</td>
+                        <td>$750</td>
+                        <td class="status-pending">Pending</td>
+                        <td>789xyz456</td>
+                        <td>012ghi345</td>
+                        <td class="paid-no">No</td>
+                        <td>Jane Smith</td>
+                    </tr>
+                `).find('tr:last').fadeIn(1000);
+            });
+            $('#transactionTable tbody').append(`
+                    <tr style="display: none;">
+                        <td>Property 2</td>
+                        <td>2024-09-02</td>
+                        <td>$150</td>
+                        <td>5</td>
+                        <td>$750</td>
+                        <td class="status-pending">Pending</td>
+                        <td>789xyz456</td>
+                        <td>012ghi345</td>
+                        <td class="paid-no">No</td>
+                        <td>Jane Smith</td>
+                    </tr>
+                `).find('tr:last').fadeIn(1000);
+        </script> -->
+        <script src="https://kit.fontawesome.com/08a57c03e1.js" crossorigin="anonymous"></script>
+
+
+        <!-- pagiantion -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const rowsPerPage = 10;
+                let currentPage = 1;
+                const table = document.getElementById('transactionTable');
+                const tbody = table.querySelector('tbody');
+                const rows = tbody.querySelectorAll('tr');
+                const totalRows = rows.length;
+                const totalPages = Math.ceil(totalRows / rowsPerPage);
+
+                const prevBtn = document.getElementById('prevBtn');
+                const nextBtn = document.getElementById('nextBtn');
+                const pageInfo = document.getElementById('pageInfo');
+
+
+                function displayRows(page) {
+                    const start = (page - 1) * rowsPerPage;
+                    const end = start + rowsPerPage;
+
+
+                    rows.forEach((row, index) => {
+                        row.style.display = (index >= start && index < end) ? '' : 'none';
+                    });
+
+                    pageInfo.textContent = ` ${page} `;
+
+
+                    prevBtn.disabled = (page === 1);
+                    nextBtn.disabled = (page === totalPages);
+                }
+
+
+                nextBtn.addEventListener('click', function () {
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        displayRows(currentPage);
+                    }
+                });
+
+
+                prevBtn.addEventListener('click', function () {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        displayRows(currentPage);
+                    }
+                });
+
+
+                displayRows(currentPage);
+            });
+
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- sorting -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const table = document.getElementById('transactionTable');
+                const headers = table.querySelectorAll('.filterIcon');
+                let tableRows = Array.from(table.querySelectorAll('tbody tr'));
+
+                headers.forEach(header => {
+                    header.addEventListener('click', () => {
+                        const columnIndex = header.dataset.column;
+                        let order = header.dataset.order;
+
+                        order = order === 'asc' ? 'desc' : 'asc';
+                        header.dataset.order = order;
+
+                        // Update arrow icons based on sorting order
+                        headers.forEach(h => {
+                            if (h === header) {
+                                h.querySelector('i').className = order === 'asc' ? 'fa-solid fa-arrow-down-short-wide' : 'fa-solid fa-arrow-up-short-wide';
+                            } else {
+                                h.querySelector('i').className = 'fa-solid fa-arrow-up-short-wide';
+                            }
+                        });
+
+
+                        tableRows.sort((rowA, rowB) => {
+                            let cellA = rowA.cells[columnIndex].innerText.trim();
+                            let cellB = rowB.cells[columnIndex].innerText.trim();
+
+
+                            const isNumericA = !isNaN(cellA) && cellA !== '';
+                            const isNumericB = !isNaN(cellB) && cellB !== '';
+
+                            if (isNumericA && isNumericB) {
+                                cellA = parseFloat(cellA);
+                                cellB = parseFloat(cellB);
+                            }
+
+
+                            if (order === 'asc') {
+                                // Ascending order
+                                return isNumericA && isNumericB ? cellA - cellB : cellA.localeCompare(cellB, undefined, { numeric: true });
+                            } else {
+                                // Descending order
+                                return isNumericA && isNumericB ? cellB - cellA : cellB.localeCompare(cellA, undefined, { numeric: true });
+                            }
+                        });
+
+
+                        const tbody = table.querySelector('tbody');
+                        tableRows.forEach(row => tbody.appendChild(row));
+                    });
+                });
+            });
+        </script>
+
+
+        <!-- searching  -->
+        <script>
+            function myFunction() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("property");
+                li = ul.getElementsByTagName("tr");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("td")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
+
+
+
+        <script>
+
+        </script>
+        <script>
+            function myFunction() {
+                // Retrieve the search input and convert to uppercase
+                var input = document.getElementById("myInput");
+                var filter = input.value.toUpperCase();
+
+                // Get the table and tbody
+                var table = document.getElementById("transactionTable");
+                var tbody = table.getElementsByTagName("tbody")[0];
+
+                // Get all the table rows in tbody
+                var tr = tbody.getElementsByTagName("tr");
+
+                // Loop through each row in tbody
+                for (var i = 0; i < tr.length; i++) {
+                    // Get the first column (Property Name)
+                    var td = tr[i].getElementsByTagName("td")[0];
+
+                    // Check if the td element exists
+                    if (td) {
+                        var txtValue = td.textContent || td.innerText;
+
+                        // If the filter matches the text, show the row; otherwise, hide it
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = ""; // Show row
+                        } else {
+                            tr[i].style.display = "none"; // Hide row
+                        }
+                    }
+                }
+            }
+
+        </script>
+
+
+        <script>
+            // Print
+
+
+            const pdf = document.querySelector("#print_option");
+            const table = document.querySelector(".InvestmentTableContainer");
+
+            const print_option = function (table) {
+                const html_code = `
+                   <link rel="stylesheet" href="/src/assets/css/index.css">
+                   <div class = "InvestmentTableContainer">${table.innerHTML}</div>`;
+
+                const new_window = window.open('', '', 'width=500,height=600,top=0')
+                new_window.document.write(html_code);
+                setTimeout(() => {
+                    new_window.print();
+                    new_window.close();
+                }, 200);
+
+            }
+            pdf.onclick = () => {
+                print_option(table)
+
+            }
+
+
+            //    csv
+            function downloadCSV() {
+                let table = document.getElementById("transactionTable");
+                let rows = Array.from(table.rows);
+                let csvContent = "";
+
+                rows.forEach(row => {
+                    let rowData = Array.from(row.cells)
+                        .map(cell => `"${cell.textContent.replace(/"/g, '""')}"`)
+                        .join(",");
+                    csvContent += rowData + "\n";
+                });
+                const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+                const downloadLink = document.createElement("a");
+                downloadLink.href = URL.createObjectURL(blob);
+                downloadLink.download = "table_data.csv";
+
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+            }
+
+            // excel
+            function downloadExcel() {
+                let table = document.getElementById("transactionTable");
+                let rows = Array.from(table.rows);
+                let tableContent = `<table border="1">`;
+
+                rows.forEach(row => {
+                    tableContent += `<tr>`;
+                    Array.from(row.cells).forEach(cell => {
+                        tableContent += `<td>${cell.textContent}</td>`;
+                    });
+                    tableContent += `</tr>`;
+                });
+
+                tableContent += `</table>`;
+
+                const blob = new Blob([tableContent], { type: "application/vnd.ms-excel" });
+                const downloadLink = document.createElement("a");
+                downloadLink.href = URL.createObjectURL(blob);
+                downloadLink.download = "table_data.xls";
+
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+            }
+        </script>
+
+        <!-- Include jsPDF and autoTable plugin -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.14/jspdf.plugin.autotable.min.js"></script>
+
+    </body>
+
+</html>

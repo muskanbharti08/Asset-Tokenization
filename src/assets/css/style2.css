@@ -1,0 +1,664 @@
+
+/* investorProfile */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --primary-color: #194a7a;
+    --secondary-color: #eff4fd;
+    --fontPrime: "poppins";
+}
+
+
+body {
+    background-color: var(--secondary-color);
+    margin-top: 50px;
+}
+
+
+.kk {
+
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+
+}
+
+.dec {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 25px;
+    color: var(--primary-color);
+    margin-top: 70px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.dec:hover {
+    border-bottom: none;
+}
+#nationalId{
+    top: 0;
+}
+
+#photoUpload::-webkit-file-upload-button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    transition: all 1s ease;
+    font-size: 13px;
+    z-index: 1;
+    position: relative;
+    border-radius: 25px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 2px solid;
+}
+#photoUpload::-webkit-file-upload-button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+
+#photoUpload2::-webkit-file-upload-button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    transition: all 1s ease;
+    font-size: 13px;
+    z-index: 1;
+    position: relative;
+    border-radius: 25px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 2px solid;
+}
+
+#photoUpload2::-webkit-file-upload-button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+
+nav {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    margin: 0;
+}
+
+.investorProfilerow input:focus {
+    border-bottom: 2px solid var(--primary-color);
+    /* transform: scale(75s); */
+}
+
+.investorProfileContainer {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px var(--primary-color);
+    border-radius: 10px;
+    position: relative;
+    background: var(--secondary-color);
+    /* height: 50%; */
+}
+
+.header {
+    text-align: center;
+    padding-bottom: 7 0px;
+}
+
+.InvestorProfileIcon {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #003366;
+    color: white;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.investorFormContainer {
+    margin-top: 70px;
+}
+
+.investorProfilerow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+.photoUpload2{
+    margin-top: 10px;
+        }
+
+.investorProfileFormGroup {
+    width: 48%;
+    padding: 4px;
+}
+
+.investorProfileFormGroup input,
+.investorProfileFormGroup select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.investorProfileFormGroup input[disabled],
+.investorProfileFormGroup select[disabled] {
+    background-color: #e9ecef;
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.investorProfileFormGroup input,
+.investorProfileFormGroup select:focus {
+    text-decoration: none;
+    outline: none;
+    /* border-bottom: 2px solid var(--primary-color); */
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: #2f2f2f;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    padding-bottom: 50px;
+}
+
+.check-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: -40px;
+    opacity: 0;
+}
+
+.check-box svg {
+    width: 25px;
+    margin-top: 2px;
+    /* margin: 20px; */
+}
+
+svg path {
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-dasharray: 34;
+    stroke-dashoffset: 34;
+    stroke-linecap: round;
+}
+
+.active {
+    background: #194172;
+    transition: 1s;
+}
+
+.active .check-box {
+    right: 0;
+    opacity: 1;
+    top: 4px;
+    transition: 1s;
+}
+
+.active p {
+    margin-right: 125px;
+    transition: 1s;
+}
+
+.active svg path {
+    stroke-dashoffset: 0;
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+.save-btn,
+.edit-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.save-btn {
+    background-color: #003366;
+    color: var(--secondary-color);
+}
+
+.save-btn:hover {
+    background-color: #19548f;
+
+}
+
+.edit-btn {
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    background: skyblue;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+        7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+        4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    outline: none;
+    border-radius: 5px;
+}
+
+.edit-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color) !important;
+}
+
+#photoUpload {
+    border: 1px solid white;
+    background: white;
+}
+
+#photoUpload[disabled] {
+    background-color: #e9ecef;
+    color: #6c757d;
+    text-decoration: none;
+    border: none;
+}
+
+#photoUpload:focus {
+    border-bottom: 1px solid var(--primary-color);
+    transition: .5s ease;
+    
+}
+
+#photoUpload2 {
+    border: 1px solid white;
+    background: white;
+}
+
+#photoUpload2[disabled] {
+    background-color: #e9ecef;
+    color: #6c757d;
+    text-decoration: none;
+    border: none;
+}
+
+#photoUpload2:focus {
+    border-bottom: 1px solid var(--primary-color);
+    transition: .5s ease;
+    
+}
+
+.investorProfileContainer {
+    margin: 2px 20px;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 769px) {
+    .investorProfileFormGroup {
+        width: 100%;
+        padding: 4px;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+        margin: 0;
+    }
+    .photoUpload2{
+        margin-top: 2px;
+    
+            }
+    
+ 
+    .InvestorProfileIcon {
+        top: -30px;
+        padding: 15px;
+        font-size: 20px;
+    }
+
+    .investorFormContainer {
+        margin-top: 40px;
+    }
+
+    .kk {
+        display: flex;
+        justify-content: center;
+        gap: 20%;
+    }
+
+    .dec {
+        text-decoration: none;
+        font-weight: bolder;
+        font-size: 20px;
+        color: var(--primary-color);
+        margin-top: 50px;
+        border-bottom: 2px solid var(--primary-color);
+    }
+}
+
+.btn-16 {
+    border: none;
+    color: #000;
+}
+
+.btn-16:after {
+    position: absolute;
+    content: "";
+    width: fit-content;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+}
+
+.btn-16:hover {
+    color: #000;
+}
+
+.btn-16:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+}
+
+.btn-16:active {
+    top: 2px;
+}
+
+.investorProfilerow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.investorProfileFormGroup {
+    width: 48%;
+    padding: 4px;
+}
+
+
+/* for phone */
+@media (max-width: 769px) {
+    .investorProfilerow {
+        display: inline;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .investorProfileFormGroup {
+        width: 100%;
+        padding: 4px;
+    }
+
+    .investorProfileFormGroup input,
+    .investorProfileFormGroup select {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .investorFormContainer {
+        margin-top: 20px;
+    }
+
+
+    nav {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75vh;
+        margin: 0;
+    }
+
+}
+
+
+
+
+        body {
+            padding: 0;
+            animation: pulse 5s infinite;
+            background: var(--secondary-color);
+            margin: 80px auto;
+        }
+
+        .as {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .iconText{
+            font-family: var(--font-family);
+
+            color: var(--primary-color);
+            margin-top: 10px;
+        }
+        .kk {
+
+            display: flex;
+            justify-content: center;
+            gap: 20%;
+        }
+
+        .dec {
+            text-decoration: none;
+            font-weight: bolder;
+            font-size: 25px;
+            color: var(--primary-color);
+            margin-top: 70px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .dec:hover {
+            border-bottom: none;
+        }
+
+        .kyc {
+            border: 2px solid var(--secondary-color);
+            border-radius: 20px;
+            box-shadow: 0px 0px 8px var(--primary-color);
+            margin: 0 auto;
+            width: 80%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background: white;
+            margin-top: 50px;
+        }
+
+        .kycElement {
+            border: 2px solid var(--primary-color);
+            background: var(--primary-color);
+            border-radius: 100px;
+            color: var(--secondary-color);
+            padding: 20px 20px;
+        }
+
+        .containerKyc {
+            position: relative;
+            width: 70%;
+            /* margin: 280px auto;  */
+            padding: 10px 20px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background: #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .Loading {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: 10px;
+            background: #f1f1f1;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .Loading:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 0;
+            height: 100%;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            animation: load 5s infinite;
+        }
+
+        @media (max-width: 769.98px) {
+            .kycElement {
+                border: 2px solid var(--primary-color);
+                background: var(--primary-color);
+                border-radius: 100px;
+                color: var(--secondary-color);
+                padding: 20px 20px;
+            }
+
+            .Loading {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                height: 5px;
+                background: #f1f1f1;
+                box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+                border-radius: 4px;
+                overflow: hidden;
+            }
+
+            .kyc {
+                border: 2px solid var(--secondary-color);
+                border-radius: 20px;
+                box-shadow: 0px 0px 8px var(--primary-color);
+                margin: 0 auto;
+                width: 80%;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                background: white;
+                margin-top: 50px;
+            }
+
+            .containerKyc {
+                position: relative;
+                width: 50%;
+                /* margin: 280px auto;  */
+                padding: 10px 20px;
+                border-radius: 4px;
+                box-sizing: border-box;
+                background: #fff;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            }
+            .kk {
+            display: flex;
+            justify-content: center;
+            gap: 30%;
+            color: var(--primary-color);
+        }
+
+        .dec {
+            text-decoration: none;
+            font-family: var(--font-family);
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+
+
+
+
+        }
+
+        @media (max-width: 1005px) {
+            .kyc {
+                border: 2px solid var(--secondary-color);
+                border-radius: 20px;
+                box-shadow: 0px 0px 8px var(--primary-color);
+                margin: 0px auto;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+
+        @keyframes load {
+            0% {
+                width: 0;
+                background: #a28089;
+            }
+
+            25% {
+                width: 40%;
+                background: #a0d2eb;
+            }
+
+            50% {
+                width: 60%;
+                background: #ffa8b6;
+            }
+
+            75% {
+                width: 75%;
+                background: #d0bdf4;
+            }
+
+            100% {
+                width: 100%;
+                background: #494d5f;
+            }
+        }
+
+
+        
+.error {
+    color: red;
+    font-size: 13px;
+    display: block;
+    /* margin-bottom: 20px; */
+}
+
+
+

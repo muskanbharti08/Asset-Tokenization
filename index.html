@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Register</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="src/assets/css/index.css">
+
+
+</head>
+
+<body class="index">
+   
+    <div class="">
+        <nav class="navbar">
+
+            <img src="/src/assets/svg/a.svg" alt="Logo" class="firstLogo">
+
+
+            <div class="logo">
+                <img src="/src/assets/svg/a.svg" alt="Logo">
+                <div class="logo">
+                    <a class="anchorTag" href="#investment">Offering</a>
+                    <a class="anchorTag" href="#investment">Investment</a>
+                    <a class="anchorTag" href="#voting">Voting</a>
+                    <a class="anchorTag" href="#wallet">Wallet</a>
+                </div>
+
+            </div>
+
+            <div class="profileMenu">
+                <div class="search-container">
+                    <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" id="searchBar" placeholder="Search...">
+                </div>
+                <button id="profileBtn"><i class="fa-regular fa-user"></i></button>
+                <div class="dropdownContent" id="profileDropdown">
+                    <div>
+                        <a class="profileComponent" href="/src/pages/InvestorProfile.html"><i class="fa-solid fa-circle-user"></i> Profile </a>
+                        <a class="profileComponent" href="#message"> <i class="fa-solid fa-comment"></i> Message </a>
+                        <a href="#logout">Logout <i class="fa-solid fa-right-to-bracket"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- mobile view -->
+            <div class="mobileDashboard">
+                <div class=" btn">
+                    <button id="toggleBtn">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+                <div id="sidebar" class="sidebar">
+
+                    <div style="display: flex;justify-content: end;">
+                        <button class="closeBtn" id="closeBtn"><i class="fa-solid fa-xmark"></i></button>
+
+                    </div>
+
+                    <div class="sidebarContent">
+                        <input type="text" id="searchbar" placeholder="Search...">
+                        <a href="#">Offering <i class="fa-solid fa-handshake"></i></a>
+                        <a href="#">Investment <i class="fa-solid fa-coins"></i></a>
+                        <a href="#">Voting <i class="fa-solid fa-diamond"></i></a>
+                        <a href="#">Wallet <i class="fa-solid fa-wallet"></i></a>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </nav>
+    </div>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- jQuery Validation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"
+        integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- JS -->
+    <script src="/src/assets/js/main.js"></script>
+    <!-- Fontawesone -->
+    <script src="https://kit.fontawesome.com/99e1031307.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
